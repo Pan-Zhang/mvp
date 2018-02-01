@@ -36,7 +36,7 @@ android {
             def newName
             def outDirectory = 'D:\\apk'
             if (variant.buildType.name.equals('debug')) {
-                    newName = 'mvp-debug('+APP_VERSION'+).apk'
+                    newName = 'mvp-debug('+APP_VERSION+').apk'
                 } else {
                     newName = 'mvp_release('+APP_VERSION+').apk'
                 }
