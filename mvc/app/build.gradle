@@ -27,21 +27,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    
-    //修改生成的apk名字
-    applicationVariants.all { variant ->
-	    variant.outputs.each { output ->
-		def outDirectory = 'D:\\apk'
-        	def newName = 'GMall(1.0).apk'
-		if (variant.buildType.name.equals('debug')) {
-			newName = 'GMall(1.0)_debug.apk'
-		}
-		else{
-			newName = 'GMall(1.0)_release.apk'
-		}
-        	output.outputFile = new File(outDirectory, newName)
-	}
-    }
 }
 
 dependencies {
