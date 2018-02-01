@@ -30,10 +30,11 @@ android {
     
     //修改生成的apk名字
     applicationVariants.all { variant ->
-	    outDirectory = 'D:\\apk'
-        newName = 'GMall(1.0).apk'
-        output.outputFile = new File(outDirectory, newName)
-
+	    variant.outputs.each { output ->
+		def outDirectory = 'D:\\apk'
+        	def newName = 'GMall(1.0).apk'
+        	output.outputFile = new File(outDirectory, newName)
+	}
     }
 }
 
