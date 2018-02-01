@@ -29,6 +29,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
+    //修改生成的apk名字
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def newName
+            def outDirectory = 'D:\\apk'
+            if (variant.buildType.name.equals('debug')) {
+                    newName = "mvp-debug.apk"
+                } else {
+                    newName = mvp_release.apk'
+                }
+
+            output.outputFile = new File(outDirectory, newName)
+
+        }
+    }
 }
 
 dependencies {
