@@ -16,7 +16,7 @@ android {
         releaseConfig {
             keyAlias 'guotaigold'
             keyPassword 'guotai123'
-            storeFile file('D:\\android_key.keystore')
+            storeFile file('D:\\android_key')
             storePassword 'guotai123'
         }
     }
