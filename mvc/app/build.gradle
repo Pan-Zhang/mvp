@@ -33,6 +33,12 @@ android {
 	    variant.outputs.each { output ->
 		def outDirectory = 'D:\\apk'
         	def newName = 'GMall(1.0).apk'
+		if (variant.buildType.name.equals('debug')) {
+			newName = 'GMall(1.0)_debug.apk'
+		}
+		else{
+			newName = 'GMall(1.0)_release.apk'
+		}
         	output.outputFile = new File(outDirectory, newName)
 	}
     }
