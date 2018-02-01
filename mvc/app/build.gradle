@@ -13,7 +13,7 @@ android {
     }
     
     signingConfigs {
-        signingConfig {
+        releaseConfig {
             keyAlias 'guotaigold'
             keyPassword 'guotai123'
             storeFile file('D:\\android_key.keystore')
