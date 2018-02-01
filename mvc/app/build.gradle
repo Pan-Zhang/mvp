@@ -8,7 +8,8 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName APP_VERSION
+        resValue("string", 'app_version', APP_VERSION)
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     
